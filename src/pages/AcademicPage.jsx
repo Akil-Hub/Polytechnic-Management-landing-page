@@ -14,7 +14,7 @@ const AcademicPage = () => {
   return (
     <section className="wrapper ">
       <picture
-        className="  w-full h-100 flex justify-center bg-cover items-center  bg-center rounded-2xl hover:scale-102 duration-400"
+        className="  w-full h-100 flex justify-center bg-cover items-center  bg-center rounded-2xl hover:scale-102 duration-400  mt-5"
         style={{ backgroundImage: `url(${banner})` }}
       >
         <h2 className="text-6xl text-gray-200">Here is our All Departments</h2>

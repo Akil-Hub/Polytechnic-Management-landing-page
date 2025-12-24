@@ -5,7 +5,7 @@ const AllNotice = () => {
   return (
     <section className="   wrapper">
       <picture
-        className="relative   h-100 w-full bg-center bg-cover  rounded-2xl flex items-center justify-center hover:scale-102 duration-400"
+        className="relative   h-100 w-full bg-center bg-cover  rounded-2xl flex items-center justify-center hover:scale-102 duration-400  mt-5"
         style={{ backgroundImage: `url(${banner})` }}
       >
         <h3 className=" text-center text-gray-300 text-6xl">Here is our All Notices</h3>

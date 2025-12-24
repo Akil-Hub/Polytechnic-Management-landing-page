@@ -7,7 +7,7 @@ const CSTPage = () => {
   return (
     <section className='wrapper '>
          <picture
-                className=" mt-10  relative w-full h-100 flex justify-center bg-cover items-center  overflow-hidden bg-center rounded-2xl hover:scale-102 duration-400 "
+                className=" mt-10  relative w-full h-100 flex justify-center bg-cover items-center  overflow-hidden bg-center rounded-2xl hover:scale-102 duration-400  mt-5 "
                 style={{ backgroundImage: `url(${cstBanner})` }}
               >
                 <div className="overlay h-full w-full bg-black/10 absolute"></div>
