@@ -1,22 +1,12 @@
-import React from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import NoticeSection from './components/NoticeSection';
-import AboutUs from './components/AboutUs';
-import Study from './components/Study';
-import OurDepartment from './components/OurDepartment';
-import Footer from './components/Footer';
+import { RouterProvider } from "react-router-dom";
+import  router  from "./router";
 
 const App = () => {
   return (
     <>
-      <Navbar />
-      <Hero />
-      <NoticeSection/>
-      <AboutUs/>
-      <Study/>
-      <OurDepartment/>
-      <Footer/>
+    <RouterProvider router={router} />
+
+     
     </>
   );
 };

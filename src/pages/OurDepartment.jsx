@@ -6,10 +6,20 @@ import Civil1 from '@/assets/Civil1.png';
 import Electronics from '@/assets/Electronics.png';
 import RAC from '@/assets/RAC.png';
 import ElectroMedical from '@/assets/Electro-Medical.png';
-import LargeBtn from './LargeBtn';
+import banner from '@/assets/banner.png';
+import LargeBtn from '../components/Buttons/LargeBtn';
+import { Link, useNavigate } from 'react-router-dom';
 const OurDepartment = () => {
+  const navigate = useNavigate();
   return (
-    <section className="wrapper">
+    <section className="wrapper ">
+      <picture
+        className="  w-full h-100 flex justify-center bg-cover items-center  bg-center rounded-2xl "
+        style={{ backgroundImage: `url(${banner})` }}
+      >
+        <h2 className="text-6xl text-gray-200">Here is our All Departments</h2>
+      </picture>
+
       <h2 className="text-primary text-2xl font-semibold my-10 pl-3">Our Departments !</h2>
       {/* Department card start */}
       <div className="flex flex-wrap">
@@ -20,7 +30,13 @@ const OurDepartment = () => {
           </div>
           <h3 className="py-6  font-semibold text-center">Computer Science and Technology</h3>
           <div className="w-full flex justify-center">
-            <LargeBtn text="View Details" className="w-full!" />
+            <LargeBtn
+              onClick={() => {
+                navigate('/cst');
+              }}
+              text="View Details"
+              className="w-full!"
+            />
           </div>
         </div>
         {/* ET */}
@@ -86,7 +102,11 @@ const OurDepartment = () => {
           </div>
           <h3 className="py-6  font-semibold text-center">Electro-medical Technology</h3>
           <div className="w-full flex justify-center">
-            <LargeBtn text="View Details" className="w-full!" />
+            <LargeBtn text="View Details"  />
+            <LargeBtn text="View Details" > <Link to='/cst'> CST</Link> </LargeBtn>
+
+            <p><Link to='/cst'> CST</Link></p>
+            
           </div>
         </div>
       </div>

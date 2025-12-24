@@ -6,7 +6,7 @@ import growth from '@/assets/growth.png';
 
 import upCurve from '@/assets/upCurve.png';
 import downCurve from '@/assets/downCurve.png';
-import Button from './Button';
+import Button from './Buttons/Button';
 const Study = () => {
   return (
     <section className=" bg-gray-100 py-10">
