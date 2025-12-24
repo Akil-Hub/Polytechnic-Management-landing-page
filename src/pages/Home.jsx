@@ -3,7 +3,7 @@ import Hero from '../components/Hero';
 import AboutUs from '../components/AboutUs';
 import NoticeSection from '../components/NoticeSection';
 import Study from '../components/Study';
-import OurDepartment from './OurDepartment';
+import OurDepartment from '../components/OurDepartment';
 import SearchBar from '../components/SearchBar';
 
 const Home = () => {

@@ -5,7 +5,7 @@ const AboutUsPage = () => {
   return (
     <section className='wrapper'>
           <picture
-                        className="  relative w-full h-100 flex justify-center bg-cover items-center  overflow-hidden bg-center rounded-2xl "
+                        className="  relative w-full h-100 flex justify-center bg-cover items-center  overflow-hidden bg-center rounded-2xl hover:scale-102 duration-400 "
                         style={{ backgroundImage: `url(${Instructor})` }}
                       >
                         <div className="overlay h-full w-full bg-black/10 absolute"></div>

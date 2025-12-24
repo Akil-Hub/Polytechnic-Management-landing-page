@@ -7,14 +7,14 @@ import Electronics from '@/assets/Electronics.png';
 import RAC from '@/assets/RAC.png';
 import ElectroMedical from '@/assets/Electro-Medical.png';
 import banner from '@/assets/banner.png';
-import LargeBtn from '../components/Buttons/LargeBtn';
+import LargeBtn from '@/components/Buttons/LargeBtn';
 import { Link, useNavigate } from 'react-router-dom';
-const OurDepartment = () => {
+const AcademicPage = () => {
   const navigate = useNavigate();
   return (
     <section className="wrapper ">
       <picture
-        className="  w-full h-100 flex justify-center bg-cover items-center  bg-center rounded-2xl "
+        className="  w-full h-100 flex justify-center bg-cover items-center  bg-center rounded-2xl hover:scale-102 duration-400"
         style={{ backgroundImage: `url(${banner})` }}
       >
         <h2 className="text-6xl text-gray-200">Here is our All Departments</h2>
@@ -102,11 +102,7 @@ const OurDepartment = () => {
           </div>
           <h3 className="py-6  font-semibold text-center">Electro-medical Technology</h3>
           <div className="w-full flex justify-center">
-            <LargeBtn text="View Details"  />
-            <LargeBtn text="View Details" > <Link to='/cst'> CST</Link> </LargeBtn>
-
-            <p><Link to='/cst'> CST</Link></p>
-            
+            <LargeBtn text="View Details" />
           </div>
         </div>
       </div>
@@ -115,4 +111,4 @@ const OurDepartment = () => {
   );
 };
 
-export default OurDepartment;
+export default AcademicPage;

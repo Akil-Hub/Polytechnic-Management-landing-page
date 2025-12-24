@@ -5,12 +5,13 @@ import AboutUs from '@/components/AboutUs';
 import UniversalLayout from './layouts/UniversalLayout';
 import Home from './pages/Home';
 import Study from '@/components/Study';
-import OurDepartment from '@/pages/OurDepartment';
+import OurDepartment from '@/components/OurDepartment';
 import AllNotice from '@/pages/AllNotice';
 import Instructor from './pages/Instructors';
 import ContactUsPage from './pages/ContactUsPage';
 import AboutUsPage from './pages/AboutUsPage';
 import CSTPage from './pages/CSTPage';
+import AcademicPage from './pages/AcademicPage';
 
 const router = createBrowserRouter([
   {
@@ -35,7 +36,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'academic',
-        element: <OurDepartment />,
+        element: <AcademicPage />,
       },
       {
         path: 'instructors',
