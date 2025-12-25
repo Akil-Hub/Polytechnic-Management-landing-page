@@ -2,12 +2,15 @@ import React from 'react';
 import { FiSearch } from 'react-icons/fi';
 import logo from '/logo.svg';
 import Button from './Buttons/Button';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import SearchBar from './SearchBar';
 const Navbar = () => {
+  const navLinkClass = ({ isActive }) =>
+    `text-xl relative before:absolute before:content-[""] before:bg-primary before:h-0.75 before:left-0 before:duration-400 hover:scale-105 transition-all duration-400  before:-bottom-[4px] hover:before:w-full
+      ${isActive ? 'text-primary before:w-full ' : 'text-gray-800 before:w-0'}`;
+
   return (
     <section>
-
       <nav className="flex justify-between items-center wrapper py-1">
         <div className="">
           <img src={logo} alt="" />
@@ -15,23 +18,35 @@ const Navbar = () => {
 
         <div className="NavItems">
           <ul className="flex gap-8 items-center ">
-            <li className=' text-xl  text-gray-800 relative before:absolute before:content-[""] before:bg-primary before:h-0.75  before:w-0  before:-bottom-px before:left-0 hover:before:w-full  before:duration-300 hover:text-primary hover:scale-105 transition-all duration-400'>
-              <Link to="/">Home</Link>
+            <li>
+              <NavLink to="/" className={navLinkClass}>
+                Home
+              </NavLink>
             </li>
-            <li className='  text-gray-800 text-xl relative before:absolute before:content-[""] before:bg-primary before:h-0.75  before:w-0  before:-bottom-px before:left-0 hover:before:w-full  before:duration-300 hover:text-primary hover:scale-105 transition-all duration-400 '>
-              <Link to="/notice">Notice</Link>
+            <li className="  ">
+              <NavLink to="/notice" className={navLinkClass}>
+                Notice
+              </NavLink>
             </li>
-            <li className=' text-xl  text-gray-800 relative before:absolute before:content-[""] before:bg-primary before:h-0.75  before:w-0  before:-bottom-px before:left-0 hover:before:w-full  before:duration-300 hover:text-primary hover:scale-105 transition-all duration-400'>
-              <Link to="academic">Academic</Link>
+            <li>
+              <NavLink to="academic" className={navLinkClass}>
+                Academic
+              </NavLink>
             </li>
-            <li className=' text-xl  text-gray-800 relative before:absolute before:content-[""] before:bg-primary before:h-0.75  before:w-0  before:-bottom-px before:left-0 hover:before:w-full  before:duration-300  hover:text-primary hover:scale-105 transition-all duration-400'>
-              <Link to="instructors">Instructor</Link>
+            <li className>
+              <NavLink to="instructors" className={navLinkClass}>
+                Instructor
+              </NavLink>
             </li>
-            <li className=' text-xl  text-gray-800 relative before:absolute before:content-[""] before:bg-primary before:h-0.75  before:w-0  before:-bottom-px before:left-0 hover:before:w-full  before:duration-300  hover:text-primary hover:scale-105 transition-all duration-400'>
-              <Link to="/contact">Contact</Link>
+            <li className>
+              <NavLink to="/contact" className={navLinkClass}>
+                Contact
+              </NavLink>
             </li>
-            <li className=' text-xl  text-gray-800 relative before:absolute before:content-[""] before:bg-primary before:h-0.75  before:w-0  before:-bottom-px before:left-0 hover:before:w-full  before:duration-300 hover:text-primary hover:scale-105 transition-all duration-400 '>
-              <Link to="/about">About MUPI</Link>
+            <li>
+              <NavLink to="/about" className={navLinkClass}>
+                About MUPI
+              </NavLink>
             </li>
           </ul>
         </div>
