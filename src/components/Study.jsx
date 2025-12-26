@@ -16,7 +16,7 @@ const Study = () => {
           {/* studies card start */}
           <div className="flex flex-col md:flex-row">
 
-            <div className=" flex flex-col justify-center pl-12  py-20 md:w-[25%] shadow-2xl rounded-2xl hover:scale-105 duration-400">
+            <div className=" flex flex-col justify-center md:pl-12 items-center  py-20 md:w-[25%] shadow-2xl rounded-2xl hover:scale-105 duration-400">
               <div className=" flex gap-2 pl-12">
                 {' '}
                 <img src={learningHands} alt="" />

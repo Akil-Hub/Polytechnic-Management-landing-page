@@ -9,7 +9,7 @@ const MobileAside = ({ isNavOpen ,setIsNavOpen }) => {
       ${isActive ? 'text-white before:w-full ' : 'text-gray-300 before:w-0'}`;
   return (
     <div
-      className={`h-screen w-40 bg-primary fixed z-10 duration-500 transition-transform top-0 right-0 md:hidden  transform  ease-in-out ${isNavOpen ? 'translate-x-0' : 'translate-x-[130%]'}  `}
+      className={`h-screen w-55 bg-primary fixed z-10 duration-500 transition-transform top-0 right-0 md:hidden  transform  ease-in-out ${isNavOpen ? 'translate-x-0' : 'translate-x-[130%]'}  `}
     >
       <IoMdClose
         className="size-7 absolute top-7 right-10 md:hidden z-20"

@@ -6,7 +6,6 @@ import Civil1 from '@/assets/Civil1.png';
 import Electronics from '@/assets/Electronics.png';
 import RAC from '@/assets/RAC.png';
 import ElectroMedical from '@/assets/Electro-Medical.png';
-import banner from '@/assets/banner.png';
 import LargeBtn from './Buttons/LargeBtn';
 import { Link, useNavigate } from 'react-router-dom';
 const OurDepartment = () => {

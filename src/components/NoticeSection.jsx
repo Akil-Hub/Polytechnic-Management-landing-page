@@ -5,7 +5,6 @@ import Button from './Buttons/Button';
 import DownloadBtn from './Buttons/DownloadBtn';
 import noticeData from '@/Data/NoticeData';
 const NoticeSection = () => {
-  console.log(noticeData);
   return (
     <section className="bg-gray-100 ">
       <div className="wrapper   ">

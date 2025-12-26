@@ -12,6 +12,8 @@ import ContactUsPage from './pages/ContactUsPage';
 import AboutUsPage from './pages/AboutUsPage';
 import CSTPage from './pages/CSTPage';
 import AcademicPage from './pages/AcademicPage';
+import Form from '@/components/AdminDashboard/Form';
+import AdminDashboard from '@/components/AdminDashboard/AdminDashboard';
 
 const router = createBrowserRouter([
   {
@@ -45,6 +47,14 @@ const router = createBrowserRouter([
       {
         path: 'cst',
         element: <CSTPage />,
+      },
+      {
+        path: 'admin',
+        element: <AdminDashboard />,
+      },
+      {
+        path: 'profile',
+        element: <Form/>,
       },
     ],
   },

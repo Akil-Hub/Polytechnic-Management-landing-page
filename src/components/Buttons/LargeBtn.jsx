@@ -1,8 +1,8 @@
 import React from 'react'
 
-const LargeBtn = ({text,onClick}) => {
+const LargeBtn = ({text,onClick,type='button'}) => {
   return (
-      <button className="bg-primary text-white w-full h-12 rounded-lg  hover:bg-transparent border border-primary duration-500 hover:text-black " onClick={onClick}>
+      <button className="bg-primary text-white w-full h-12 rounded-lg  hover:bg-transparent border border-primary duration-500 hover:text-black text-xl " onClick={onClick} type={type}>
       {text}{' '}
     </button>
   )
