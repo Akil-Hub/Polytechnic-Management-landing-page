@@ -7,7 +7,7 @@ const Footer = () => {
         {/* Footer grid */}
         <div className="grid md:grid-cols-[2fr_1fr_1fr_1fr] gap-y-8 md:gap-y-0  ">
           {/* Footer logo and text  */}
-          <div className="2fr-col py-10 ">
+          <div className="2fr-col py-10 pl-10 md:pl-0 ">
             <div className="flex gap-4 items-center">
               <div>
                 <img src={logo} alt="" />
