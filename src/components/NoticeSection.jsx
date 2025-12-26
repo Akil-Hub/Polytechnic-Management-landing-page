@@ -53,7 +53,7 @@ const NoticeSection = () => {
 
         {/* Notice card end */}
 
-        <h2 className="text-primary text-2xl font-semibold py-14  md:mt-20 mt-130">
+        <h2 className="text-primary text-2xl font-semibold py-14  md:mt-20 mt-150 text-center md:text-left">
           Today's Notices
         </h2>
 
