@@ -122,9 +122,9 @@ const AdminDashboard = () => {
             </div>
           </div>
 
-          <button type="submit" className="pt-8">
-            <Button text="Add Section Admin" />
-          </button>
+          <div type="submit" className="pt-8 w-60">
+            <LargeBtn text="Add Section Admin" />
+          </div>
         </form>
       </article>
 
