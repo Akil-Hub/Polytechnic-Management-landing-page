@@ -9,7 +9,7 @@ const NoticeSection = () => {
     <section className="bg-gray-100 ">
       <div className="wrapper   ">
         {/* Notice card start */}
-        <div className=" cards flex flex-wrap gap-x-20 gap-y-5 justify-center  items-center absolute md:-bottom-50 z-50 top-320 md:250 md:top-auto ">
+        <div className=" cards flex flex-wrap gap-x-20 gap-y-5 justify-center  items-center absolute md:-bottom-50 z-50 top-190 md:250 md:top-auto ">
           <div className=" flex gap-5  items-center  shadow-hero rounded-lg px-12 py-5 hover:scale-105 duration-400  bg-white ">
             <div className="">
               <img src={Hat} alt="hat img" />

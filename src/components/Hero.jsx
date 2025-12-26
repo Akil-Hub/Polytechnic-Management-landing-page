@@ -5,11 +5,11 @@ import { FaArrowRight } from 'react-icons/fa6';
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-screen overflow-hidden  ">
+    <section className="relative w-full md:h-screen h-[60vh] overflow-hidden  ">
       <img
         src={banner}
         alt="banner"
-        className="absolute inset-0 h-screen w-full bg-center bg-cover -z-50"
+        className="absolute inset-0 md:h-screen h-140 w-full bg-center bg-cover -z-50"
       />
 
       <div className="wrapper ">
