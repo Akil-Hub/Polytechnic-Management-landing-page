@@ -63,14 +63,23 @@ const Navbar = () => {
 
         {/* mobile responsive is here */}
         {
-           <FaBars
-              className={`size-7 absolute top-7 right-10 md:hidden z-20 transition-opacity duration-1000 ${isNavOpen ?'opacity-0 pointer-events-none': 'opacity-100'}`}
-              onClick={() => setIsNavOpen(!isNavOpen)}
-            />
+          <FaBars
+            className={`size-7 absolute top-7 right-10 md:hidden z-20 transition-opacity duration-1000 ${isNavOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
+            onClick={() => setIsNavOpen(!isNavOpen)}
+          />
         }
-    
-        { <MobileAside isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />}
+        {/* Backdrop - click anywhere to close */}
 
+        {isNavOpen && (
+          <div
+            className="fixed inset-0  z-9 "
+            onClick={() => {
+              setIsNavOpen(false);
+            }}
+          ></div>
+        )}
+
+        {<MobileAside isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />}
       </nav>
     </section>
   );

@@ -5,11 +5,11 @@ import { NavLink } from 'react-router-dom';
 
 const MobileAside = ({ isNavOpen ,setIsNavOpen }) => {
   const navLinkClass = ({ isActive }) =>
-    `text-xl relative before:absolute before:content-[""] before:bg-primary before:h-0.75 before:left-0 before:duration-400 hover:scale-105 transition-all duration-400  before:-bottom-[4px] hover:before:w-full
-      ${isActive ? 'text-primary before:w-full ' : 'text-gray-800 before:w-0'}`;
+    `text-xl relative before:absolute before:content-[""] before:bg-white before:h-0.75 before:left-0 before:duration-400 hover:scale-105 transition-all duration-400  before:-bottom-[4px] hover:before:w-full text-white
+      ${isActive ? 'text-white before:w-full ' : 'text-gray-300 before:w-0'}`;
   return (
     <div
-      className={`h-screen w-60 bg-blue-300 absolute z-10 duration-500 transition-transform top-0 right-0 md:hidden  transform  ease-in-out ${isNavOpen ? 'translate-x-0' : 'translate-x-[130%]'}  `}
+      className={`h-screen w-40 bg-primary fixed z-10 duration-500 transition-transform top-0 right-0 md:hidden  transform  ease-in-out ${isNavOpen ? 'translate-x-0' : 'translate-x-[130%]'}  `}
     >
       <IoMdClose
         className="size-7 absolute top-7 right-10 md:hidden z-20"
@@ -48,7 +48,6 @@ const MobileAside = ({ isNavOpen ,setIsNavOpen }) => {
           </NavLink>
         </li>
       </ul>
-      <SearchBar />
     </div>
   );
 };

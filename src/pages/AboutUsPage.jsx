@@ -18,11 +18,11 @@ const AboutUsPage = () => {
   return (
     <section className="wrapper">
       <picture
-        className="  relative w-full h-100 flex justify-center bg-cover items-center  overflow-hidden bg-center rounded-2xl hover:scale-102 duration-400  mt-5"
+        className="  relative w-full md:h-100 h-40 flex justify-center bg-cover items-center  overflow-hidden bg-center rounded-2xl hover:scale-102 duration-400  mt-5"
         style={{ backgroundImage: `url(${Instructor})` }}
       >
         <div className="overlay h-full w-full bg-black/10 absolute"></div>
-        <h2 className="text-6xl text-gray-100">Learn more about us !</h2>
+        <h2 className="md:text-6xl text-2xl text-gray-100">Learn more about us !</h2>
       </picture>
 
       <AboutUs />
@@ -35,45 +35,49 @@ const AboutUsPage = () => {
 
 
 
-<div className="grid grid-cols-4 grid-rows-4 gap-6 h-[740px] p-4">
+<div className="grid  grid-cols-2 gap-4 md:grid-cols-4 md:grid-rows-4 md:gap-6 h-auto md:h-[740px] p-4">
   
-  <div className={`${baseGridClass} row-span-3`}>
+  {/* Box 1 */}
+  <div className={`${baseGridClass} col-span-1 md:row-span-3`}>
     <img src={gridImage1} alt="GridImage" className={`${baseGridImageClass}`} />
   </div>
 
-  <div className={`${baseGridClass} col-span-2`}>
+  {/* Box 2 */}
+  <div className={`${baseGridClass} col-span-1 md:col-span-2`}>
     <img src={gridImage2} alt="GridImage" className={`${baseGridImageClass}`} />
   </div>
 
-  <div className={`${baseGridClass} row-span-2`}>
-    <img src={gridImage3} alt="GridImage"className={`${baseGridImageClass}`} />
+  {/* Box 3 */}
+  <div className={`${baseGridClass} hidden md:block col-span-1 md:row-span-2`}>
+    <img src={gridImage3} alt="GridImage" className={`${baseGridImageClass}`} />
   </div>
 
-  <div className={`${baseGridClass} col-span-2 row-span-2`}>
+  {/* Box 4 */}
+  <div className={`${baseGridClass} col-span-2 md:row-span-2`}>
     <img src={gridImage4} alt="GridImage" className={`${baseGridImageClass}`} />
   </div>
 
-  <div className={`${baseGridClass}`}>
+  {/* Box 5 */}
+  <div className={`${baseGridClass} col-span-1`}>
     <img src={gridImage5} alt="GridImage" className={`${baseGridImageClass}`} />
   </div>
 
-  <div className={`${baseGridClass}`}>
-    <img src={gridImage6} alt="GridImage"className={`${baseGridImageClass}`} />
+  {/* Box 6 */}
+  <div className={`${baseGridClass} col-span-1`}>
+    <img src={gridImage6} alt="GridImage" className={`${baseGridImageClass}`} />
   </div>
 
-  {/* Box 7: Bottom Wide */}
+  {/* Box 7 */}
   <div className={`${baseGridClass} col-span-2`}>
     <img src={gridImage7} alt="GridImage" className={`${baseGridImageClass}`}/>
   </div>
 
-  {/* Box 8: Bottom Right */}
-  <div className={`${baseGridClass}`}>
-    <img src={gridImage8} alt="GridImage"className={`${baseGridImageClass}`}/>
+  {/* Box 8 */}
+  <div className={`${baseGridClass} col-span-2 md:col-span-1`}>
+    <img src={gridImage8} alt="GridImage" className={`${baseGridImageClass}`}/>
   </div>
 
 </div>
-       
-
       {/* grid layout end */}
 
       {/* history */}

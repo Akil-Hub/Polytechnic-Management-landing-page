@@ -3,13 +3,15 @@ import Hat from '@/assets/hat.png';
 import Button1 from './Buttons/Button1';
 import Button from './Buttons/Button';
 import DownloadBtn from './Buttons/DownloadBtn';
+import noticeData from '@/Data/NoticeData';
 const NoticeSection = () => {
+  console.log(noticeData);
   return (
-    <section className="bg-gray-100 pt-10">
+    <section className="bg-gray-100 ">
       <div className="wrapper   ">
         {/* Notice card start */}
-        <div className=" cards flex flex-wrap gap-x-10 justify-center">
-          <div className=" flex gap-5  items-center  shadow-hero rounded-lg px-12 py-5 hover:scale-105 duration-400 ">
+        <div className=" cards flex flex-wrap gap-x-20 gap-y-5 justify-center  items-center absolute md:-bottom-50 z-50 top-190 md:top-auto ">
+          <div className=" flex gap-5  items-center  shadow-hero rounded-lg px-12 py-5 hover:scale-105 duration-400  bg-white ">
             <div className="">
               <img src={Hat} alt="hat img" />
             </div>
@@ -19,7 +21,7 @@ const NoticeSection = () => {
             </div>
           </div>
 
-          <div className=" flex gap-5  items-center  shadow-hero rounded-lg px-12 py-5 hover:scale-105 duration-400 ">
+          <div className=" flex gap-5  items-center  shadow-hero rounded-lg px-12 py-5 hover:scale-105 duration-400 bg-white  ">
             <div className="">
               <img src={Hat} alt="hat img" />
             </div>
@@ -29,7 +31,7 @@ const NoticeSection = () => {
             </div>
           </div>
 
-          <div className=" flex gap-5  items-center  shadow-hero rounded-lg px-12 py-5 hover:scale-105 duration-400 ">
+          <div className=" flex gap-5  items-center  shadow-hero rounded-lg px-13 py-5 hover:scale-105 duration-400  bg-white ">
             <div className="">
               <img src={Hat} alt="hat img" />
             </div>
@@ -39,7 +41,7 @@ const NoticeSection = () => {
             </div>
           </div>
 
-          <div className=" flex gap-5  items-center  shadow-hero rounded-lg px-3 py-5 hover:scale-105 duration-400 ">
+          <div className=" flex gap-5  items-center  shadow-hero rounded-lg px-3 py-5 hover:scale-105 duration-400  bg-white ">
             <div className="">
               <img src={Hat} alt="hat img" />
             </div>
@@ -52,16 +54,26 @@ const NoticeSection = () => {
 
         {/* Notice card end */}
 
-        <h2 className="text-primary text-2xl font-semibold py-14">Today's Notices</h2>
+        <h2 className="text-primary text-2xl font-semibold py-14  md:mt-20 mt-130">
+          Today's Notices
+        </h2>
 
         {/* Notice row start */}
         <div className="">
           <ul>
-            <li className="flex justify-between items-center py-3 px-3 shadow-lg my-2 bg-white rounded-lg">
+            {
+              noticeData.map((notice,id)=>(
+                <li className="flex flex-col md:flex-row justify-between items-center py-3 md:px-3 px-2 shadow-lg my-2 bg-white rounded-lg" key={id}>
               <div className="flex ">
                 <div className=" flex  py-4  ">
-                  <p className="px-5 text-xl text-gray-900">21-12-25</p> |{' '}
-                  <p className="px-5 text-gray-900 text-xl"> Exam Seat Plane Notice</p>
+                  <p className="  text-left px-2 text-base md:text-xl text-gray-900 pr-3 md:w-50">
+                    {notice.date}
+                  </p>{' '}
+                  |{' '}
+                  <p className="px-2 md:px-5 text-gray-900 md:text-xl  md:w-full pl-4 ">
+                    {' '}
+                   {notice.subject}
+                  </p>
                 </div>
               </div>
 
@@ -70,60 +82,16 @@ const NoticeSection = () => {
               </div>
             </li>
 
-            <li className="flex justify-between items-center py-3 px-3 shadow-lg my-2 bg-white rounded-lg">
-              <div className="flex ">
-                <div className=" flex  py-4  ">
-                  <p className="px-5 text-xl text-gray-900">21-12-25</p> |{' '}
-                  <p className="px-5 text-gray-900 text-xl"> Registration Fee Submission Notice</p>
-                </div>
-              </div>
-              <div className="">
-                <DownloadBtn text="Download" />
-              </div>
-            </li>
+              ))
 
-            <li className="flex justify-between items-center py-3 px-3 shadow-lg my-2 bg-white rounded-lg">
-              <div className="flex ">
-                <div className=" flex  py-4  ">
-                  <p className="px-5 text-xl text-gray-900">21-12-25</p> |{' '}
-                  <p className="px-5 text-gray-900 text-xl"> Semester Fee Submission Notice </p>
-                </div>
-              </div>
+            }
 
-              <div className="">
-                <DownloadBtn text="Download" />
-              </div>
-            </li>
-
-            <li className="flex justify-between items-center py-3 px-3 shadow-lg my-2 bg-white rounded-lg">
-              <div className="flex ">
-                <div className=" flex  py-4  ">
-                  <p className="px-5 text-xl text-gray-900">21-12-25</p> |{' '}
-                  <p className="px-5 text-gray-900 text-xl"> Admission Notice</p>
-                </div>
-              </div>
-
-              <div className="">
-                <DownloadBtn text="Download" />
-              </div>
-            </li>
-
-            <li className="flex justify-between items-center py-3 px-3 shadow-lg my-2 bg-white rounded-lg">
-              <div className="flex ">
-                <div className=" flex  py-4  ">
-                  <p className="px-5 text-xl text-gray-900">21-12-25</p> |{' '}
-                  <p className="px-5 text-gray-900 text-xl"> Exam Notice</p>
-                </div>
-              </div>
-              <div className="">
-                <DownloadBtn text="Download" />
-              </div>
-            </li>
+           
           </ul>
         </div>
 
         {/* Notice row end */}
-        <div className="py-4">
+        <div className="py-8  flex justify-center md:justify-start">
           <Button1 text={'Viw All Notice'} />
         </div>
       </div>
